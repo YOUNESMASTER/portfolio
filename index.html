@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Younes_Khouna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />   <!--swipper link -->
+</head>
+<body>
+    <!-- <button id="btnp" onclick="afficher_popup()">popup_afficher</button> -->
+   
+    
+    <header>
+        <div class="header-cont">
+            <i id="bars" class="fa-solid fa-bars"></i>
+            <i id="xmark" class="fa-solid fa-xmark"></i>
+            <a id="logo" href="#"><span>Y</span>ou_K<span>H</span></a>
+            <div class="links">
+                <a href=#home><i class="fa-solid fa-house"></i>About</a>
+                <a href=#certif><i class="fa-solid fa-graduation-cap"></i>Certifications</a>
+                <a href="#services"><i class="fa-solid fa-briefcase"></i>Services</a>
+                <a href=#contact><i class="fa-solid fa-envelope"></i>Contact</a>
+             </div>
+        </div>
+    </header>
+    <!-- Menubar for mobile screen -->
+    <div id="menubar" class="menubar">
+        <div class="menubar-links">
+            <a href=#home><i style="margin-right:2px;" class="fa-solid fa-house"></i>About</a>
+            <a href=#certif><i style="margin-right:2px;" class="fa-solid fa-graduation-cap"></i>Certifications</a>
+            <a href="#services"><i  style="margin-right:2px;" class="fa-solid fa-briefcase"></i>Services</a>
+            <a href=#contact><i style="margin-right:2px;" class="fa-solid fa-envelope"></i>Contact</a>
+        </div>
+        <div class="menubar-socials">
+            <h5>Suivez-moi Sur: </h5>
+            <i class="fa-brands fa-facebook soc"></i>
+            <i onclick="diriger_insta()" class="fa-brands fa-instagram "></i>
+            <i onclick="diriger_linkedin()" class="fa-brands fa-linkedin "></i>
+            <i class="fa-brands fa-twitter soc"></i>
+        </div>
+    </div>
+     <!-- popup starrt -->
+     <div class="cardo">
+        <i id="notif" class="fa-solid fa-bell"></i>
+        <h2>Donner votre avis sur ce site ?</h2>
+        <h3> Ca prend 2 secondes de votre temps !</h3>
+       
+        <div class="starso">
+            <i class="far fa-star" id="star1"></i>
+            <i class="far fa-star" id="star2"></i>
+            <i class="far fa-star" id="star3"></i>
+            <i class="far fa-star" id="star4"></i>
+            <i class="far fa-star" id="star5"></i>
+         </div>
+         <div class="input-container">
+            <h5>Ecrire votre avis ici:</h5>
+            <form   method="post">
+          <input type="text" placeholder="saisir votre avis ici !" name="avis">    
+        </div>
+        <div class="button-container">
+            <button id="envoyer" name="submit1">Envoyer</button>
+            </form>
+            <button id="ignorer">Ignorer</button>
+        </div>
+       
+    </div>
+     
+     <!-- <div class="popup" id="mypopup">
+        <i class="fa-solid fa-check"></i>
+        <h2>Salut !</h2>
+        <h3>Binevenue dans <span>YOU_KH</span>!</h3>
+        <button onclick="hide_pop()">close</button>
+    </div> -->
+ 
+<!-- popup end -->
+    <section id="home">
+        <!-- shade backdrip filter by me -->
+            <div id="backdrop">
+
+            </div>
+        <!-- end -->
+        
+      
+        <div id="backimg" class="background-cont">
+            <img id="homeimg" src="images/back.jpg" alt="">
+        </div>
+        <div class="title-cont">
+            <h1 id="welc">Bienvenue dans ma <span>page officielle</span> </h1>
+        </div>
+      
+        <div class="info">
+            <h2>Bonjour,je suis <span id="name">Younes Khouna</span> </h2>
+            <h1>Web developper</h1>
+            <h2>je crée des sites web complets!</h2>
+            <button onclick="diriger()">Voir Plus</button>
+        <br>
+            <ul class="socials">
+                <li><i class="fa-brands fa-facebook soc"></i></li>
+                <li><i onclick="diriger_insta()"class="fa-brands fa-instagram "></i></li>
+                <li><i onclick="diriger_linkedin()"  class="fa-brands fa-linkedin "></i></li>
+                <li><i class="fa-brands fa-twitter soc"></i></li>
+            </ul>
+            <div class="socialsresp">
+                
+                    <i class="fa-brands fa-facebook soc"></i>
+                    <i onclick="diriger_insta()"class="fa-brands fa-instagram "></i>
+                    <i onclick="diriger_linkedin()"  class="fa-brands fa-linkedin "></i>
+                    <i class="fa-brands fa-twitter soc"></i>
+                
+            </div>
+        </div>
+        <div class="profil-img">
+            <img src="images/profil2.jpg" alt="">
+            <div class="link-project">
+                <h6>Voir mes derniers projets? </h6><a id="clickici" href="#">cliquez ici !</a>
+             </div>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+    <section id="certif">
+        <h1>Certifications</h1>
+        <div id="next1" onclick="nextslide()" class="swiper-button-next"></div>
+        <div onclick="prevslide()" id="previous1" class="swiper-button-prev"></div>
+        <div class="cards-cont card-contresp510">
+            <!-- card1 -->
+            <div id="next11" onclick="nextslide11()" class="swiper-button-next"></div>
+        <div onclick="prevslide11()" id="previous11" class="swiper-button-prev"></div>
+    <div  class="card card1">
+      <div class="img-cont">
+         <img id="c11" src="images/card1.jfif" alt="">
+     </div>
+     <div class="details">
+        <h3 id="title11">HTML&CSS</h3>
+       <p>Niveau:Avancé</p>
+       <a href="certif/certifHTML.pdf" target="_blank" id="certif11"> Voir Plus</a>
+     </div>
+   </div>
+   
+        </div>
+        </div>
+  
+</div>
+        <!-----------------------------------------------------------------------------  -->
+<div class="cards-cont card-contresp">
+            <!-- card1 -->
+    <div  class="card card1">
+      <div class="img-cont">
+         <img id="c1" src="images/card1.jfif" alt="">
+     </div>
+     <div class="details">
+        <h3 id="language1">HTML&CSS</h3>
+       <p>Niveau:Avancé</p>
+       <a href="certif/certifHTML.pdf" target="_blank" id="certif1"> Voir Plus</a>
+     </div>
+   </div>
+   <!-- card2 -->
+   <div  class="card card2">
+    <div class="img-cont">
+       <img id="c2" src="images/card3.jfif" alt="">
+   </div>
+   <div class="details">
+    <h3 id="language2">Javascript</h3>
+    <p>Niveau:Avancé</p>
+    <a href="certif/certifJS.pdf" target="_blank" id="certif2"> Voir Plus</a>
+   </div>
+ </div>
+        </div>
+        </div>
+  
+</div>
+<!-- ----------------------------------------------------------------- -->
+<div class="certif-container">
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"> <!--slide numero 1-->
+                
+                <div class="cards-cont">
+                    <div id="next" class="swiper-button-next"></div>
+                    <div id="previous" class="swiper-button-prev"></div>
+                                  <!-- card1 -->
+                         <div class="card card1">
+                            <div class="img-cont">
+                               <img src="images/card1.jfif" alt="">
+                           </div>
+                           <div class="details">
+                              <h3>HTML&CSS</h3>
+                             <p>Niveau:Avancé</p>
+                             <a href="certif/certifHTML.pdf" target="_blank"> Voir Plus</a>
+                           </div>
+                         </div>
+                         <!-- card2 -->
+                         <div class="card card2">
+                          <div class="img-cont">
+                             <img src="images/card3.jfif" alt="">
+                         </div>
+                         <div class="details">
+                          <h3>Javascript</h3>
+                          <p>Niveau:Avancé</p>
+                          <a href="certif/certifJS.pdf" target="_blank"> Voir Plus</a>
+                         </div>
+                       </div>
+                       <!-- card3 -->
+                       <div class="card card3">
+                          <div class="img-cont">
+                              <img src="images/card4.png" alt="">
+                         </div>
+                         <div class="details">
+                          <h3>Php</h3>
+                          <p>Niveau:Avancé</p>
+                          <a href="certif/certifPHP.pdf" target="_blank"> Voir Plus</a>
+                         </div>
+                       </div>
+                    </div>
+                        
+              </div>
+                      <!-- CONTAINER CARD 2 -->
+                      <!-- slider3 -->
+                      <div style="display:none;" class="swiper-slide"> <!--slide numero 1-->
+                
+                        <div class="cards-cont">
+                            
+                                          <!-- card6* -->
+                                 <div class="card card66">
+                                    <div class="img-cont">
+                                       <img src="images/card6.jfif" alt="">
+                                   </div>
+                                   <div class="details">
+                                      <h3>JAVA</h3>
+                                     <p>Niveau:Avancé</p>
+                                     <a href="certif/certifJAVA.pdf" target="_blank"> Voir Plus</a>
+                                   </div>
+                                 </div>
+                                 <!-- card3* -->
+                                 <div class="card card33">
+                                  <div class="img-cont">
+                                     <img src="images/card4.png" alt="">
+                                 </div>
+                                 <div class="details">
+                                  <h3>PHP</h3>
+                                  <p>Niveau:Avancé</p>
+                                  <a href="certif/certifPHP.pdf" target="_blank"> Voir Plus</a>
+                                 </div>
+                               </div>
+                               
+                               
+                            </div>
+                                
+                      </div>
+     <div class="swiper-slide"> <!--slide numero 2-->
+                <div class="cards-cont">
+                    <div id="next" class="swiper-button-next"></div>
+                    <div id="previous" class="swiper-button-prev"></div>
+            <!-- card4 -->
+                     <div class="card card4">
+                         <div class="img-cont">
+                           <img src="images/card5.jfif" alt="">
+                         </div>
+                         <div class="details">
+                             <h3>MySQL</h3>
+                             <p>Niveau:Avancé</p>
+                             <a href="certif/certifSQL.pdf" target="_blank"> Voir Plus</a>
+                         </div>
+                        </div>
+   <!-- card5 -->
+                      <div class="card card5">
+                           <div class="img-cont">
+                                <img src="images/card7.png" alt="">
+                            </div>
+                           <div class="details">
+                            <h3>Language C</h3>
+                            <p>Niveau:Moyen</p>
+                            <a href="certif/certifC.pdf" target="_blank"> Voir Plus</a>
+                        </div>
+                    </div>
+ <!-- card6 -->
+                      <div class="card card6">
+                           <div class="img-cont">
+                                 <img src="images/card6.jfif" alt="">
+                           </div>
+                           <div class="details">
+                            <h3>JAVA</h3>
+                            <p>Niveau:Moyen</p>
+                            <a href="certif/certifJAVA.pdf" target="_blank"> Voir Plus</a>
+                            </div>
+                    </div>
+                </div>
+           </div>
+     </div>
+    </div>
+     <!-- end slider swipper -->
+    </section>
+        
+             
+<!-- ---------------------------------------------------------------------------- -->
+
+
+
+
+
+        
+
+    <section id="services">
+        <!-- front end // backend // host -->
+        <h1>Services</h1>
+        <div class="cards-cont2">
+            <!-- card1 -->
+   <div class="card" id="card1">
+      <div class="img-cont">
+         <img src="images/front.png" alt="">
+     </div>
+     <div class="details">
+        <h3>Front-End</h3>
+       <p>Niveau:Avancé</p>
+       <button>Contacter</button>
+     </div>
+   </div>
+   <!-- card2 -->
+   <div class="card">
+    <div class="img-cont">
+       <img src="images/backend.png" alt="">
+   </div>
+   <div class="details">
+    <h3>Back-End</h3>
+    <p>Niveau:Avancé</p>
+   <button>Contacter</button>
+   </div>
+ </div>
+ <!-- card3 -->
+ <div class="card">
+    <div class="img-cont">
+        <img src="images/host.jpg" alt="">
+   </div>
+   <div class="details">
+    <h3>Hosting</h3>
+    <p>Niveau:Avancé</p>
+    <button>Contacter</button>
+   </div>
+ </div>
+</div>
+</section>
+<section id="avis">
+    <h1>Testimonials</h1>
+    <div class="row">
+           <div class="col co1">
+                 <div class="profil">
+                    <img src="images/avis1.jpg" alt="">
+                    <h5>Imad Yazid</h5>
+                 </div>
+                 <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                 </div>
+                 <div class="comment">
+                    <p>Je suis tres satisfait du travail que vous fournissez , un service de haute qualité et efficace et a tres bon prix par rappor aux autre freelancer !</p>
+                 </div>
+           </div>
+           <div class="col col2">
+            <div class="profil">
+                <img src="images/avis2.jpg" alt="">
+                <h5>Rania Oukhouya</h5>
+             </div>
+             <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+             </div>
+             <div class="comment">
+                  <p>Je viens de decouvrir votre site web a partir de linkedin , ca se voit qu'il ya un grand travail ici , courage Younes !!, Je vous espere beaucoup de reussite dans votre carriere</p>
+             </div>
+           </div>
+           <div class="col col3">
+            <div class="profil">
+                <img src="images/avis2.jpg" alt="">
+                <h5>Fatima quadiri</h5>
+             </div>
+             <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+             </div>
+             <div class="comment">
+                 <p>Salut younes,pouvez-vous si possible partager le fichier source de votre portfolio via Github , merci d'avance et bon courage &#128515; </p>
+             </div>
+           </div>
+    </div>
+    <div class="row11">
+        <!-- card1 -->
+        <div class="col11">
+            <div class="profil">
+                <img src="images/avis1.jpg" alt="">
+                <h5>Imad Yazid</h5>
+             </div>
+             <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+             </div>
+             <div class="comment">
+                  <p>Je suis tres satisfait du travail que vous fournissez , un service de haute qualité et efficace et a tres bon prix par rappor aux autre freelancer !</p>
+             </div>
+        </div>
+        <div class="col11">
+            <div class="profil">
+                <img src="images/avis2.jpg" alt="">
+                <h5>Rania Oukhouya</h5>
+             </div>
+             <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+             </div>
+             <div class="comment">
+                <p>Je viens de decouvrir votre site web a partir de linkedin , ca se voit qu'il ya un grand travail ici , courage Younes !!, Je vous espere beaucoup de reussite dans votre carriere</p>
+             </div>
+        </div>
+          <!-- card3 -->
+          <div class="col11">
+            <div class="profil">
+                <img src="images/avis2.jpg" alt="">
+                <h5>Fatima quadiri</h5>
+             </div>
+             <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+             </div>
+             <div class="comment">
+                <p>Salut younes,pouvez-vous si possible partager le fichier source de votre portfolio via Github , merci d'avance et bon courage &#128515; </p>
+             </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h1>Get In touch</h1>
+    <div class="cards-contact">
+        
+       <form  method="post">
+            <div class="field">
+                <label for="nom">Nom:</label>
+                <input type="text" name="nom" id="nom">
+               
+            </div>
+            <div class="field">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                
+            </div>
+         <div class="field">
+            <label for="message">Votre message:</label>
+           <input type="text" id="message" name="message">
+         </div> 
+         <button name="submit" id="submit">Envoyer</button>
+     </form>
+    </div>
+
+</section>
+<section id="footer">
+    <h5>All rights reserved by <span>@YounesKhouna</span> 2022</h5>
+    <a href="politique.html" target="_blank">politique de confidentialité</a>
+    <ul class="footer-socials">
+        <li><i class="fa-brands fa-facebook soc"></i></li>
+        <li><i onclick="diriger_insta()" class="fa-brands fa-instagram "></i></li>
+        <li><i onclick="diriger_linkedin()"  class="fa-brands fa-linkedin"></i></li>
+        <li><i class="fa-brands fa-twitter soc"></i></li>
+    </ul>
+    <h6 id="gmail"><i class="fa-brands fa-google"></i>younes.khouna@gmail.com</h5>
+    
+</section>
+</body>
+
+
+
+
+<script>
+    function diriger(){
+        location.href="index.html#services";
+    }
+
+  let bars=document.getElementById("bars");
+  let xmark=document.getElementById("xmark");
+  let menubar=document.querySelector(".menubar")
+  let mylinks=document.querySelector(".menubar-links").children;
+  let mysections=document.querySelectorAll("section");
+   function supprimermenubar(){
+    menubar.style.display="none";
+    xmark.style.visibility="hidden";
+    bars.style.visibility="visible";
+   }
+   for(const link of mylinks){
+       link.addEventListener('click',supprimermenubar);
+   }
+
+ bars.addEventListener('click',()=>{
+    location.href="#menubar";
+     menubar.style.display="block";
+     bars.style.visibility="hidden";
+     xmark.style.visibility="visible";
+ })
+ xmark.addEventListener('click',()=>{
+     menubar.style.display="none";
+     bars.style.visibility="visible";
+     xmark.style.visibility="hidden";
+ });
+//  slider code myslider propre
+    let mysources=["images/card1.jfif","images/card3.jfif","images/card4.png","images/card5.jfif","images/card6.jfif","images/card7.png"];
+    let titles=['HTML&CSS','JAVASCRIPT','PHP','MYSQL','Language C','JAVA'];
+    let certifs=["certif/certifHTML.pdf","certif/certifJS.pdf","certif/certifPHP.pdf","certif/certifSQL.pdf","certif/certifC.pdf","certif/certifJAVA.pdf"]
+    
+    let clicknext=0;
+    let clickprev=0;
+   
+    let c1=document.getElementById("c1");
+    let c2=document.getElementById("c2");
+    let certif1=document.getElementById("certif1");
+    let certif2=document.getElementById("certif2");
+    let language1=document.getElementById("language1");
+    let language2=document.getElementById("language2");
+     function slide0(){
+         c1.src=mysources[0];
+         c2.src=mysources[1];
+         language1.textContent=titles[0];
+         certif1.href=certifs[0];
+         language2.textContent=titles[1];
+         certif2.href=certifs[1];
+     }
+     function slide1(){
+         c1.src=mysources[2];
+         c2.src=mysources[3];
+         language1.textContent=titles[2];
+         certif1.href=certifs[2];
+         language2.textContent=titles[3];
+         certif2.href=certifs[3];
+     }
+     function slide2(){
+         c1.src=mysources[4];
+         c2.src=mysources[5];
+         language1.textContent=titles[4];
+         certif1.href=certifs[4];
+         language2.textContent=titles[5];
+         certif2.href=certifs[5];
+     }
+     function nextslide(){
+          clicknext++;
+         if(clicknext==1){
+             slide1();
+            
+         } 
+         else if(clicknext==2){
+             slide2();
+            
+         } 
+         else{
+             slide0();
+             clicknext=0;
+         }
+     }
+     function prevslide(){
+         clickprev++;
+         if(clickprev==1){
+             slide2();
+             
+         }
+         else if(clickprev==1){
+             slide1();
+            
+         }
+         else{
+             slide0();
+             clickprev=0;
+         }
+     }
+    //  let certifs=["certif/certifHTML.pdf","certif/certifJS.pdf","certif/certifPHP.pdf","certif/certifSQL.pdf","certif/certifC.pdf","certif/certifJAVA.pdf"]
+     let c11=document.getElementById("c11");
+     let title11=document.getElementById("title11");
+     let certif11=document.getElementById('certif11');
+     let clicknext11= 0;
+     let clickprev11=0;
+     function nextslide11(){
+        clicknext11++;
+         if(clicknext11==1){
+              c11.src=mysources[1];
+              title11.textContent=titles[1];
+              certif11.href=certifs[1];
+         }
+         else if(clicknext11==2){
+              c11.src=mysources[2];
+              title11.textContent=titles[2];
+              certif11.href=certifs[2];
+            }
+         else if(clicknext11==3){
+              c11.src=mysources[3];
+              title11.textContent=titles[3];
+              certif11.href=certifs[3];
+            }  
+         else if(clicknext11==4){
+              c11.src=mysources[4];
+              certif11.href=certifs[5];
+              title11.textContent=titles[5];
+         } 
+         else if(clicknext11==5){
+              c11.src=mysources[5];
+              certif11.href=certifs[4];
+              title11.textContent=titles[4];
+         } 
+         else {
+              c11.src=mysources[0];
+              certif11.href=certifs[0];
+              title11.textContent=titles[0];
+              clicknext11=0;
+         } 
+
+     }
+      function prevslide11(){
+        clickprev11++;
+        if(clickprev11==1){
+            c11.src=mysources[5];   
+            certif11.href=certifs[4];
+            title11.textContent=titles[4];
+        }
+        else if(clickprev11==2){
+            c11.src=mysources[4]; 
+            certif11.href=certifs[5];
+            title11.textContent=titles[5];
+        }
+        else if(clickprev11==3){
+            c11.src=mysources[3]; 
+            certif11.href=certifs[3];
+            title11.textContent=titles[3];
+        }
+        else if(clickprev11==4){
+            c11.src=mysources[2];
+            certif11.href=certifs[2];
+            title11.textContent=titles[2]; 
+        }
+        else if(clickprev11==5){
+            c11.src=mysources[1]; 
+            certif11.href=certifs[1];
+            title11.textContent=titles[1];
+        }
+        else{
+            c11.src=mysources[0]; 
+            certif11.href=certifs[0];
+            title11.textContent=titles[0];
+            clickprev11=0;
+        }
+      }
+    //   let submit=document.getElementById("submit");
+    //   submit.addEventListener('click',()=>{
+    //       alert("votre message a ete envoye avec succes !");
+    //   })
+ 
+      
+      let btnp=document.getElementById("btnp");
+        let sections=document.querySelectorAll("section")
+        let backimg=document.getElementById("backimg");
+        let homeimg=document.getElementById('homeimg');
+        let mybody=document.querySelector("body")
+       
+    //    setTimeout(afficher_popup,9000);
+       let project_click=document.getElementById("clickici");
+       project_click.addEventListener('click',champ_nondispo);
+       //champs noon disponible function 
+       let mysocials=document.querySelectorAll('.soc');
+       for(const soc of mysocials){
+        soc.addEventListener('click',champ_nondispo);
+       }
+       function champ_nondispo(){
+        alert("Ce champ nest pas disponible pour le moment !");
+         
+       }
+       // contacter button diriger vers la section contact
+       let contacter_btn=document.querySelectorAll(".details button");
+       for(const btn of contacter_btn){
+          btn.addEventListener('click',()=>{
+            location.href="#contact";
+          })
+       }
+       function diriger_insta(){
+        location.href="https://www.instagram.com/younes_kh22/";        
+       }
+       function diriger_linkedin(){
+        location.href=" https://ma.linkedin.com/in/younes-khouna-402b36200";        
+       }
+       function diriger_facebook(){
+        location.href=" https://ma.linkedin.com/in/younes-khouna-402b36200";        
+       }
+    //    function afficher_avis(){
+    //     alert("Voir ce que les visiteurs disent sur nous ?");
+    //     location.href="#avis";
+    //    }
+    //    setTimeout(afficher_avis,20000);
+       // popup script start
+       //poip audio
+      
+
+//     let mypopup=document.getElementById("mypopup");
+//     function afficher_pop(){
+//         document.getElementById("backdrop").style.visibility="visible";
+//         let myaudio= new Audio();
+//         myaudio.src="audios/notif.mp3";
+//         myaudio.play();
+//         location.href="#home";
+//         mypopup.classList.add("afficher");
+//         document.getElementById("home").style.opacity="0.3";
+//         for(const sect of sections){
+//             sect.classList.add("undisplay");
+//             document.getElementById("home").classList.remove("undisplay");
+//     }
+// }
+    // function hide_pop(){
+    //     document.getElementById("home").style.opacity="1";
+    //     mypopup.classList.remove("afficher");
+    //     for(const sect of sections){
+    //           sect.classList.remove("undisplay");
+    //     }
+    //     document.getElementById("backdrop").style.visibility="hidden";
+    // }
+    // hide all sections except home !! a faire 
+    // setTimeout(afficher_pop,2500);
+    // popup script end
+     
+      //stars event start
+      let counter=0;
+         let mystars=document.querySelector(".starso").children;
+         
+         for(let i=0;i<mystars.length;i++){
+            mystars[i].addEventListener('click',()=>{
+              
+               
+                 counter++;
+                 if(counter%2!=0){ //si le nbr de click est imapair
+                    for(let j=0;j<=i;j++){
+                    mystars[j].classList.remove("far");
+                    mystars[j].classList.add("fas");
+                    mystars[j].style.color="orange";
+                  
+                }
+                alert("vous avez donner une note de"+(i+1));
+                
+                 }
+                 //nbr de click pair
+                 else{
+                    for(let i=0;i<mystars.length;i++){
+                    mystars[i].classList.remove("fas");
+                    mystars[i].classList.add("far");
+                    mystars[i].style.color="black";
+                }
+                 }
+               
+            })
+         }
+         
+        
+         //star event end!!
+        //messagede merci pur avoir envoyer un avis
+        document.getElementById("envoyer").addEventListener('click',()=>{
+            alert("Merci pour avoir voter, a Bientot !");
+            hide_pop();
+        })
+
+
+        let mycardo=document.querySelector('.cardo');
+        function afficher_pop(){
+            mycardo.classList.add("affichero");
+            document.getElementById("home").style.opacity="0.3";
+             for(const sect of sections){
+                 sect.classList.add("undisplay");
+                 document.getElementById("home").classList.remove("undisplay");
+                  }
+                  document.getElementById("backdrop").style.visibility="visible";
+                  let myaudio= new Audio();
+                  myaudio.src="audios/notif.mp3";
+                  myaudio.play();
+                  location.href="#home";
+        }
+        function hide_pop(){
+            mycardo.classList.remove("affichero");
+            document.getElementById("home").style.opacity="1";
+                for(const sect of sections){
+                    sect.classList.remove("undisplay");
+                    }
+         document.getElementById("backdrop").style.visibility="hidden";
+        }
+        setTimeout(afficher_pop,15000);
+        document.getElementById("ignorer").addEventListener('click',hide_pop);
+        
+        //traduction anglais proposition 
+        function translate_prop(){
+            let question=confirm("Translate into English?");
+            if(question){
+                location.href="indexEN.html";
+            }
+        }
+        setTimeout(translate_prop,5000);
+      
+
+</script>
+
+
+
+
+
+
+
+
+<!--jscode swipper-->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerview: 1,loop:true,
+        spaceBetween: 40,
+        centeredSlides: true,
+        
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+</html>
+
+
+
+
